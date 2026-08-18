@@ -1,0 +1,47 @@
+{
+  "name": "Ken",
+  "displayName": "KEN",
+  "health": 950,
+  "walkSpeed": 130,
+  "jumpForce": 500,
+  "spriteSheets": {
+    "idle": { "file": "sprites/idle.png", "frameWidth": 96, "frameHeight": 128, "frames": 6, "frameRate": 8, "loop": true },
+    "walk": { "file": "sprites/walk.png", "frameWidth": 96, "frameHeight": 128, "frames": 8, "frameRate": 10, "loop": true },
+    "jump": { "file": "sprites/jump.png", "frameWidth": 96, "frameHeight": 128, "frames": 4, "frameRate": 10, "loop": false },
+    "crouch": { "file": "sprites/crouch.png", "frameWidth": 96, "frameHeight": 128, "frames": 3, "frameRate": 8, "loop": true },
+    "light_punch": { "file": "sprites/light_punch.png", "frameWidth": 96, "frameHeight": 128, "frames": 4, "frameRate": 12, "loop": false, "hitFrame": 2, "damage": 28, "hitbox": { "x": 60, "y": 40, "w": 30, "h": 20 } },
+    "medium_punch": { "file": "sprites/medium_punch.png", "frameWidth": 96, "frameHeight": 128, "frames": 5, "frameRate": 12, "loop": false, "hitFrame": 2, "damage": 48, "hitbox": { "x": 65, "y": 40, "w": 35, "h": 20 } },
+    "heavy_punch": { "file": "sprites/heavy_punch.png", "frameWidth": 96, "frameHeight": 128, "frames": 6, "frameRate": 10, "loop": false, "hitFrame": 3, "damage": 75, "hitbox": { "x": 70, "y": 35, "w": 40, "h": 25 } },
+    "light_kick": { "file": "sprites/light_kick.png", "frameWidth": 96, "frameHeight": 128, "frames": 4, "frameRate": 12, "loop": false, "hitFrame": 2, "damage": 33, "hitbox": { "x": 55, "y": 50, "w": 35, "h": 20 } },
+    "medium_kick": { "file": "sprites/medium_kick.png", "frameWidth": 96, "frameHeight": 128, "frames": 5, "frameRate": 12, "loop": false, "hitFrame": 2, "damage": 53, "hitbox": { "x": 60, "y": 50, "w": 40, "h": 20 } },
+    "heavy_kick": { "file": "sprites/heavy_kick.png", "frameWidth": 96, "frameHeight": 128, "frames": 6, "frameRate": 10, "loop": false, "hitFrame": 3, "damage": 82, "hitbox": { "x": 65, "y": 45, "w": 45, "h": 25 } },
+    "special_1": { "file": "sprites/special_1.png", "frameWidth": 96, "frameHeight": 128, "frames": 8, "frameRate": 12, "loop": false, "hitFrame": 4, "damage": 85, "hitbox": { "x": 80, "y": 40, "w": 50, "h": 30 } },
+    "special_2": { "file": "sprites/special_2.png", "frameWidth": 96, "frameHeight": 128, "frames": 10, "frameRate": 15, "loop": false, "hitFrame": 5, "damage": 115, "hitbox": { "x": 70, "y": 30, "w": 40, "h": 60 } },
+    "hit": { "file": "sprites/hit.png", "frameWidth": 96, "frameHeight": 128, "frames": 3, "frameRate": 10, "loop": false },
+    "block": { "file": "sprites/block.png", "frameWidth": 96, "frameHeight": 128, "frames": 2, "frameRate": 6, "loop": true },
+    "ko": { "file": "sprites/ko.png", "frameWidth": 96, "frameHeight": 128, "frames": 4, "frameRate": 6, "loop": false },
+    "win": { "file": "sprites/win.png", "frameWidth": 96, "frameHeight": 128, "frames": 8, "frameRate": 8, "loop": false }
+  },
+  "specialMoves": [
+    {
+      "name": "Hadouken",
+      "input": ["DOWN", "DOWN-FORWARD", "FORWARD", "PUNCH"],
+      "sprite": "special_1",
+      "damage": 85,
+      "projectile": true,
+      "projectileSpeed": 320
+    },
+    {
+      "name": "Shoryuken",
+      "input": ["FORWARD", "DOWN", "DOWN-FORWARD", "PUNCH"],
+      "sprite": "special_2",
+      "damage": 115,
+      "projectile": false,
+      "antiAir": true
+    }
+  ],
+  "voice": {
+    "hit": "assets/sfx/ken_hit.mp3",
+    "special": "assets/sfx/ken_hadouken.mp3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Training Stage",
+  "displayName": "TRAINING STAGE",
+  "background": "background.png",
+  "music": "assets/music/training.mp3",
+  "floorY": 668,
+  "bounds": {
+    "left": 100,
+    "right": 924
+  },
+  "parallax": [
+    { "layer": "bg_far", "speed": 0.2 },
+    { "layer": "bg_mid", "speed": 0.5 },
+    { "layer": "bg_near", "speed": 0.8 }
+  ]
+}
